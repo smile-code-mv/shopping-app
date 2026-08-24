@@ -14,4 +14,4 @@ function useCounter() {
   return { count, plus, minus }
 }
 
-export default useCounter()
+export default useCounter

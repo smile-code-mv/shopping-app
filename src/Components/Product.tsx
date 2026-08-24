@@ -1,32 +1,31 @@
 import React from 'react'
+import useCounter from '@utils/useCounter'
 
 type ProductProps = {
-  id : string
   name : string
   price : number
-  img : string
+  image : string
+  isSell : boolean
 }
 
-const Product = ({id,name,price,img} : ProductProps) => {
+const Product = ({name,price,image} : ProductProps) => {
  
-  const [selected,setSelected] = React.useState(false)
-  const [count,setCount] = React.useState(0)
-
-  const Click = () => {
-    if(selected === false){
-      setSelected(true)
-    }
-  }
+  const {count, plus, minus} = useCounter(0)
+  const showButtons = React.useContext(ProductContext)
 
   return (
-    <div className="product" style={{backgroundImage : `url(${img})`}}>
+
+    <div className="product">
+    <img src={image} />
     <h2>{name}</h2>
     <p>{price}$ {count > 0 && <>x {count}</>}</p>
-    <button id="add" onClick={() => {Click(),setCount(count + 1)}}>+</button>
-    {count > 0 && <>
-      <button id="remove" onClick={count > 0 && setCount(count - 1)}>-</button>
-      <button id="confirm">✓</button>
-      </>
+    {showButtons &&
+      <button id="add" onClick={() => plus()}>+</button>
+      {count > 0 && <>
+        <button id="remove" onClick={() => minus()}>-</button>
+        <button id="confirm">✓</button>
+        </>
+      }
     }
     </div>
   )

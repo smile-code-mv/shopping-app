@@ -25,9 +25,9 @@
     /*Pathes*/
     "baseUrl": ".",
     "paths" : {
-      "@/" : ["./src/*"],
-      "@components/" : ["./src/Components/*"],
-      "@utils" : ["./src/Utils/*"]
+      "@/*" : ["./src/*"],
+      "@components/*" : ["./src/Components/*"],
+      "@utils/*" : ["./src/Utils/*"]
     }
   },
   "include": ["src"]
