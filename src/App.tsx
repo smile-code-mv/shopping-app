@@ -3,7 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom'
 import Product from '@components/Product'
 import './App.scss'
 
-const ProductContext = React.createContext<boolean>(true)
+export const ProductContext = React.createContext<boolean>(true)
 
 function App() {
   return(

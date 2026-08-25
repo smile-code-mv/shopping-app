@@ -1,16 +1,16 @@
 import React from 'react'
+import { ProductContext } from 'src/App'
 import useCounter from '@utils/useCounter'
 
 type ProductProps = {
   name : string
   price : number
   image : string
-  isSell : boolean
 }
 
 const Product = ({name,price,image} : ProductProps) => {
  
-  const {count, plus, minus} = useCounter(0)
+  const {count, plus, minus} = useCounter()
   const showButtons = React.useContext(ProductContext)
 
   return (
