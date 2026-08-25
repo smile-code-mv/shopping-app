@@ -7,7 +7,7 @@ type Product = {
   image : string
 }
 
-type Target = 'storage' | 'sell' | 'buy'
+export type Target = 'storage' | 'sell' | 'buy'
 
 const Manager = () => {
   const [storage,setStorage] = React.useState<Product[]>([])
