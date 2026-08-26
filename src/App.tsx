@@ -1,11 +1,16 @@
 import React from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
 import Product from '@components/Product'
+import useProductManager from '@utils/productManager'
+import { ProductManagerContext } from '@utils/prioductManagerContext'
 import './App.scss'
 
 export const ProductContext = React.createContext<boolean>(true)
 
 function App() {
+
+  const manager = useProductManager()
+
   return(
     <>
     <h1>Shop app</h1>
@@ -17,17 +22,23 @@ function App() {
     <Routes>
     <Route path="/sell"
            element={
-             <ProductContext.Provider value={true}></ProductContext.Provider>
+             <ProductContext.Provider value={true}>
+              <ProductManagerContext.Provider value={manager}></ProductManagerContext.Provider>
+             </ProductContext.Provider>
            }
     />
     <Route path="/"
             element={
-              <ProductContext.Provider value={false}></ProductContext.Provider>      
+              <ProductContext.Provider value={false}>
+                <ProductManagerContext.Provider value={manager}></ProductManagerContext.Provider>
+              </ProductContext.Provider>      
             }
      />
      <Route path="/buy"
             element={
-              <ProductContext.Provider value={true}></ProductContext.Provider>
+              <ProductContext.Provider value={true}>
+                <ProductManagerContext.Provider value={manager}></ProductManagerContext.Provider>
+              </ProductContext.Provider>
             }
      />
     </Routes>
