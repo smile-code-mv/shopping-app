@@ -21,6 +21,16 @@ And
 ```bash
 yarn install
 ```
+
+### If commands don't work
+```bash
+npm install --global yarn
+```
+And
+```bash
+yarn install
+```
+
 ## How start
 ```bash
 yarn dev

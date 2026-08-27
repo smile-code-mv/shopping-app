@@ -2,7 +2,7 @@ import React from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
 import Product from '@components/Product'
 import useProductManager from '@utils/productManager'
-import { ProductManagerContext } from '@utils/prioductManagerContext'
+import { ProductManagerContext } from '@utils/productManagerContext'
 import './App.scss'
 
 export const ProductContext = React.createContext<boolean>(true)
