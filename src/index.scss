@@ -1,0 +1,26 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+nav{
+  display: flex;
+  justify-content: center;
+  gap: 1vw;
+}
+body {
+  margin-top: 1vh;
+}
+.navButton{
+  padding: 2.5vw;
+  width: 5vw;
+  height: 1vh;
+  background-color: blue;
+  color: wheat;
+  text-decoration: none;
+  border: 5px solid darkblue;
+  border-radius: 50px;
+}
+.selected{
+  background-color: darkblue;
+}
