@@ -1,3 +1,6 @@
+
+# Attention, this project created in debian and it doesn't have docker !!!
+
 # Shopping App
 
 It is a simple imitation of a shopping website built with React, Typescript, Sass. 
