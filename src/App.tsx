@@ -3,9 +3,8 @@ import { Routes, Route, Link } from 'react-router-dom'
 import Product from '@components/Product'
 import useProductManager from '@utils/productManager'
 import { ProductManagerContext } from '@utils/productManagerContext'
+import { ProductContext } from '@utils/productContext'
 import './App.scss'
-
-export const ProductContext = React.createContext<boolean>(true)
 
 function App() {
 

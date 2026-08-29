@@ -1,7 +1,6 @@
 import React from 'react'
-import { ProductContext } from 'src/App'
+import { ProductContext } from '@utils/productContext'
 import useCounter from '@utils/useCounter'
-import useProductManager from '@utils/productManager'
 import { ProductManagerContext } from '@utils/productManagerContext'
 import { type Target } from '@utils/productManager'
 
