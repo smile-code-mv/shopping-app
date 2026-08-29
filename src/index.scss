@@ -20,7 +20,8 @@ body {
   text-decoration: none;
   border: 5px solid darkblue;
   border-radius: 50px;
-}
-.selected{
-  background-color: darkblue;
+
+  &:hover{
+    background-color: darkblue;
+  }
 }
