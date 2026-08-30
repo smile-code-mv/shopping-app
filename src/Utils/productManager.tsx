@@ -59,7 +59,7 @@ const Manager = () => {
    }
 
 
-  return { create, add, remove, move }
+  return { storage, sell, buy, create, add, remove, move }
 
 }
 
