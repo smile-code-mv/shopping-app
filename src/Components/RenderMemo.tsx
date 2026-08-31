@@ -3,11 +3,11 @@ import { ProductManagerContext } from '@utils/productManagerContext'
 import Product from './Product.tsx'
 import { type Target } from '@utils/productManager'
 
-type RenderProp = {
+type RenderProps = {
   target : Target
 }
 
-const Render = ({ target } : RenderProp) => {
+const Render = ({ target } : RenderProps) => {
 
   const manager = React.useContext(ProductManagerContext)
 
@@ -19,6 +19,7 @@ const Render = ({ target } : RenderProp) => {
     case 'sell' : memory = manager?.sell
     break;
     case 'buy' : memory = manager?.buy
+    break;
   }
 
   return (
@@ -34,3 +35,5 @@ const Render = ({ target } : RenderProp) => {
   )
 
 }
+
+export default Render
