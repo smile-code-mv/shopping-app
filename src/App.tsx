@@ -1,4 +1,3 @@
-import React from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
 import { ProductManagerContext } from '@utils/productManagerContext'
 import { ProductContext } from '@utils/productContext'
@@ -6,8 +5,6 @@ import Render from '@components/RenderMemo'
 import './App.scss'
 
 function App() {
-
-  const manager = useProductManager()
 
   return(
     <>
