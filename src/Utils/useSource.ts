@@ -1,4 +1,4 @@
-const Source = () => {
+const useSource = () => {
   const names = ['banana','mango','apple','orange']
   const random = (start : number, end : number) : number => Math.floor(Math.random() * (end - start + 1)) + start
 
@@ -8,6 +8,8 @@ const Source = () => {
   function randomIndex(){
     return random(1,3)
   }
+
+  return {names, randomProduct, randomIndex}
 }
 
 export default Source
