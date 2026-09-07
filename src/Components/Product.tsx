@@ -21,9 +21,6 @@ const Product = ({ name, price, image, target } : ProductProps) => {
  
   const {count, plus, minus} = useCounter()
   const showButtons = React.useContext(ProductContext)
-  const product = React.useMemo( () =>
-    manager.create(name,price,image), [name,price,image]
-  )
 
   return (
 

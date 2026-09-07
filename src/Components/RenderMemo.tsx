@@ -29,6 +29,7 @@ const Render = ({ target } : RenderProps) => {
                  name={product.name}
                  price={product.price}
                  image={product.image}
+                 target={target}
         />
       ))}
     </main>
