@@ -4,11 +4,11 @@ function useCounter() {
   const [count,setCount] = React.useState(0)
 
   const plus = (n = 1) => {
-    setCount(count + n)
+    setCount(prev => prev + n)
   }
 
   const minus = (n = 1) => {
-    setCount(count - n)
+    setCount(prev => prev - n)
   }
 
   return { count, plus, minus }

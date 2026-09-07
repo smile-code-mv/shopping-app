@@ -10,9 +10,19 @@ type Product = {
 export type Target = 'storage' | 'sell' | 'buy'
 
 const Manager = () => {
+
+  const startBuy = [
+    {
+      id : 'jddhdveiws9922vdd',
+      name : 'banana',
+      price : 30,
+      image : '/banana1.jpg'
+    },
+  ]
+
   const [storage,setStorage] = React.useState<Product[]>([])
   const [sell,setSell] = React.useState<Product[]>([])
-  const [buy,setBuy] = React.useState<Product[]>([])
+  const [buy,setBuy] = React.useState<Product[]>(startBuy)
 
   const create = (name : string = '', price : number = 0, image : string = '' ) => {
     const product : Product = {
